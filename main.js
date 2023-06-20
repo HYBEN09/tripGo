@@ -31,3 +31,27 @@ destinations.forEach((destination) => {
 
   destinationContent.insertAdjacentHTML("beforeend", colContent);
 });
+
+fetch("./public/scripts/data/packageItem.json")
+  .then((response) => response.json())
+  .then((data) => {
+    const rowItemsHtml = data
+      .map(
+        (item) => `
+      <div class="container-box">
+        <div class="container-img">
+          <img src="${item.imgSrc}" alt="${item.altText}" />
+        </div>
+        <h4>${item.title}</h4>
+        <p>${item.description}</p>
+      </div>
+    `
+      )
+      .join("");
+
+    const rowItemsContainer = document.querySelector(".row-items");
+    rowItemsContainer.innerHTML = rowItemsHtml;
+  })
+  .catch((error) => {
+    console.error("An error occurred while fetching the JSON data:", error);
+  });

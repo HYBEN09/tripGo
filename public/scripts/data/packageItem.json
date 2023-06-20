@@ -1,0 +1,26 @@
+[
+  {
+    "imgSrc": "./assets/img/cruise.png",
+    "altText": "크루즈 여행",
+    "title": "Cruises Tour",
+    "description": "150개의 숙박 시설"
+  },
+  {
+    "imgSrc": "./assets/img/food.png",
+    "altText": "먹방 여행",
+    "title": "Food Tour",
+    "description": "120개의 숙박 시설"
+  },
+  {
+    "imgSrc": "./assets/img/vacations.png",
+    "altText": "여름 휴가",
+    "title": "Summer Rest",
+    "description": "170개의 숙박 시설"
+  },
+  {
+    "imgSrc": "./assets/img/mountain.png",
+    "altText": "산 투어",
+    "title": "Mountain Tours",
+    "description": "110개의 숙박 시설"
+  }
+]
