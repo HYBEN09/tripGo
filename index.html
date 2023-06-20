@@ -13,8 +13,47 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./public/styles/style.css" />
     <script src="main.js" type="module"></script>
   </head>
-  <body></body>
+  <body>
+    <!-- Header Start -->
+    <header>
+      <h2 class="a11yHidden">홈</h2>
+      <a href="#" class="logo"> Travel</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#package">Package</a></li>
+        <li><a href="#destination">Destination</a></li>
+        <li><a href="#contact">contact Us</a></li>
+      </ul>
+    </header>
+    <!-- Header End-->
+
+    <!-- Home Section Start -->
+    <section class="home" id="home">
+      <div class="home-video">
+        <video
+          id="video"
+          src="assets/video/traveler.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+      <div class="home-text">
+        <h1>
+          Fuel Mind <br />
+          Travel
+        </h1>
+        <p>
+          새로운 모험으로 떠나는 출발! 마음을 여행에 담아,<br />풍요롭고
+          아름다운 세상을 만나보세요!
+        </p>
+        <button type="button" class="home-btn">둘러보기</button>
+      </div>
+    </section>
+    <!-- Home Section End -->
+  </body>
 </html>
