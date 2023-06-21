@@ -114,13 +114,17 @@ section {
   color: var(--primary-color);
   border: none;
   border-radius: 4px;
-  transition: ease 0.4s;
+  transition: all 0.4s;
   margin-top: 2rem;
   cursor: pointer;
 }
 
 .home-btn:hover {
   background: var(--bg-color);
+  box-shadow: 5px 5px 30px rgba(85 85 85 / 20%);
+}
+
+.home-btn:active {
   transform: scale(1.05);
 }
 
@@ -288,4 +292,61 @@ section {
   left: 15px;
   bottom: 30px;
   letter-spacing: 2px;
+}
+
+/* NewsLetter Section Start  */
+.newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.news-text h2 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.news-text p {
+  font-size: var(--text-base);
+  line-height: 30px;
+}
+
+.newsletter form {
+  max-width: 100%;
+  position: relative;
+}
+
+.newsletter form input {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 150px 20px 30px;
+  box-shadow: 5px 10px 30px rgba(85 85 85 / 20%);
+  outline: none;
+  border: none;
+  border-radius: 16px;
+}
+
+.newsletter form button {
+  position: absolute;
+  padding: 14px 30px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  top: 6px;
+  right: 6px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.newsletter form button:hover {
+  box-shadow: 5px 5px 30px rgba(85 85 85 / 20%);
+}
+
+.newsletter form button:active {
+  transform: scale(0.9);
 }
