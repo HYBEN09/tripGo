@@ -545,6 +545,10 @@ section {
     right: 0;
   }
 
+  .text h2 {
+    font-size: 2.5rem;
+  }
+
   .list {
     width: 50%;
     margin-bottom: var(--spacing-lg);
@@ -571,6 +575,10 @@ section {
     text-align: center;
   }
 
+  .text h2 {
+    font-size: 2rem;
+  }
+
   :root {
     --text-xl: 1.5rem;
   }
@@ -587,6 +595,7 @@ section {
 
 .swiper-slide img {
   width: 100%;
+  border-radius: 16px;
 }
 
 .swiper-pagination {
@@ -605,7 +614,6 @@ section {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: var(--secondary-color);
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -618,20 +626,20 @@ section {
 .swiper-button-prev::after {
   content: "";
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid var(--bg-color);
-  border-right: 2px solid var(--bg-color);
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid var(--secondary-color);
+  border-right: 3px solid var(--secondary-color);
   transform: rotate(225deg);
 }
 
 .swiper-button-next::after {
   content: "";
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid var(--bg-color);
-  border-right: 2px solid var(--bg-color);
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid var(--secondary-color);
+  border-right: 3px solid var(--secondary-color);
   transform: rotate(45deg);
 }
 
