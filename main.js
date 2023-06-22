@@ -49,12 +49,12 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll);
 
 // dynamically Destination data
-fetchData("./public/scripts/data/destination.json").then((data) => {
+fetchData("./scripts/data/destination.json").then((data) => {
   renderDestination(data);
 });
 
 // dynamically PackageItems data
-fetchData("./public/scripts/data/packageItem.json").then((data) => {
+fetchData("./scripts/data/packageItem.json").then((data) => {
   renderPackageItems(data);
 });
 
