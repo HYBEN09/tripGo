@@ -17,6 +17,22 @@ setupVideoControls();
 // 타이핑 효과
 startTyping();
 
+// Smooth scroll behavior
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarLinks = document.querySelectorAll("header .navbar a");
+
+  navbarLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute("href"));
+      target.scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+});
+
 // sticky header
 
 function handleScroll() {
