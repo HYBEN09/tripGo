@@ -9,7 +9,6 @@
   --primary-color: #7c66fa;
   --secondary-color: #93d3c4;
 
-  --spacing-sxxs: 0.125rem; /* 2px*/
   --spacing-xxs: 0.25rem; /* 4px*/
   --spacing-xs: 0.5rem; /* 8px */
   --spacing-sm: 0.75rem; /* 12px */
@@ -24,6 +23,4 @@
   --text-md: 1.125rem; /* 18px */
   --text-lg: 1.25rem; /* 20px */
   --text-xl: 2rem; /* 32px */
-
-  --container-width: 64rem; /* 1024px */
 }

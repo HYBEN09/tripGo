@@ -329,6 +329,10 @@ section {
   border-radius: 16px;
 }
 
+.newsletter form input:focus {
+  border: 2px solid #0000ff;
+}
+
 .newsletter form button {
   position: absolute;
   padding: 14px 30px;
@@ -427,4 +431,98 @@ section {
   color: var(--bg-color);
   font-size: var(--text-sm);
   letter-spacing: 1px;
+}
+
+/* Media Query */
+
+@media (max-width: 1400px) {
+  header {
+    padding: 17px 3%;
+    transition: all 0.2s;
+  }
+
+  header.sticky {
+    padding: 10px 3%;
+    transition: all 0.2s;
+  }
+
+  section {
+    padding: 80px 3%;
+    transition: all 0.2s;
+  }
+}
+
+@media (max-width: 1040px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .stick #menu-icon {
+    color: var(--text-color);
+  }
+
+  .home {
+    height: 88vh;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 270px;
+    height: 120vh;
+    background: #23a687;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 150px 30px;
+    transition: all 0.5s;
+  }
+
+  .navbar a {
+    display: block;
+    margin: var(--spacing-md) 0;
+  }
+
+  .sticky .navbar a {
+    color: var(--bg-color);
+  }
+
+  .navbar a:hover {
+    color: var(--text-color);
+  }
+
+  .open {
+    right: 0;
+  }
+
+  .list {
+    width: 50%;
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 576px) {
+  .list {
+    width: 100%;
+    font-size: var(--text-sm);
+  }
+
+  .end-text {
+    margin-top: -3rem;
+  }
+
+  .home-text h1 {
+    font-size: 4rem;
+  }
+  .home-text p {
+    font-size: 14px;
+  }
+  .text {
+    text-align: center;
+  }
+
+  :root {
+    --text-xl: 1.5rem;
+  }
 }
