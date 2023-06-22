@@ -2,9 +2,13 @@ import {
   setupVideoControls,
   getNode,
   destinations,
+  startTyping,
 } from "./public/scripts/index.js";
 
 const header = getNode("header");
+const navbar = getNode(".navbar");
+const menuIcon = getNode("#menu-icon");
+const navLinks = navbar.querySelectorAll("a");
 const destinationContent = getNode(".destination-content");
 
 // 홈 비디오 동작 제어
@@ -55,3 +59,18 @@ fetch("./public/scripts/data/packageItem.json")
   .catch((error) => {
     console.error("An error occurred while fetching the JSON data:", error);
   });
+
+// menu
+menuIcon.addEventListener("click", () => {
+  menuIcon.classList.toggle("bx-menu");
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("open");
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("open");
+    menuIcon.classList.remove("bx-x");
+    menuIcon.classList.add("bx-menu");
+  });
+});
