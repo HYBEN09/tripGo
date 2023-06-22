@@ -234,7 +234,7 @@ section {
 }
 
 .title h2 {
-  font-size: var(--text-xl);
+  font-size: 3rem;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -573,16 +573,17 @@ section {
   .home-text p {
     font-size: 14px;
   }
+
+  .title h2 {
+    font-size: 2rem;
+  }
+
   .text {
     text-align: center;
   }
 
   .text h2 {
     font-size: 2rem;
-  }
-
-  :root {
-    --text-xl: 1.5rem;
   }
 }
 
@@ -593,6 +594,7 @@ section {
 
 .swiper-slide {
   width: 50%;
+  max-width: 100%;
 }
 
 .swiper-slide img {
