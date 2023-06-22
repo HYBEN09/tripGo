@@ -590,6 +590,7 @@ section {
 /* swiper */
 .advertisement {
   position: relative;
+  overflow: hidden;
 }
 
 .swiper-slide {
