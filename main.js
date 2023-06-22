@@ -8,8 +8,15 @@ import {
 const header = getNode("header");
 const navbar = getNode(".navbar");
 const menuIcon = getNode("#menu-icon");
+const searchInput = getNode("#search-input");
 const navLinks = navbar.querySelectorAll("a");
+const searchButton = getNode(".search-button");
 const destinationContent = getNode(".destination-content");
+
+searchButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  searchInput.focus();
+});
 
 // 홈 비디오 동작 제어
 setupVideoControls();

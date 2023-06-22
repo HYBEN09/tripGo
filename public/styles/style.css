@@ -130,15 +130,16 @@ section {
 
 /*  Container Start  */
 .text h2 {
-  font-size: var(--text-xl);
+  font-size: 3rem;
   line-height: 1.1;
   height: 2rem;
   text-align: center;
   font-weight: 600;
 }
+
 .service-form {
   margin-bottom: 2rem;
-  margin-top: 2.5rem;
+  margin-top: 4rem;
   position: relative;
 }
 
