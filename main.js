@@ -14,6 +14,9 @@ const destinationContent = getNode(".destination-content");
 // 홈 비디오 동작 제어
 setupVideoControls();
 
+// 타이핑 효과
+startTyping();
+
 // sticky header
 
 function handleScroll() {
