@@ -1,0 +1,38 @@
+[
+  {
+    "imageSrc": "./assets/img/destinations/peru.png",
+    "altText": "마추픽추",
+    "title": "Machu Picchu",
+    "country": "PERU"
+  },
+  {
+    "imageSrc": "./assets/img/destinations/spain.png",
+    "altText": "바르셀로나",
+    "title": "Barcelona",
+    "country": "Spain"
+  },
+  {
+    "imageSrc": "./assets/img/destinations/bali.png",
+    "altText": "발리",
+    "title": "Bali",
+    "country": "Indonesia"
+  },
+  {
+    "imageSrc": "./assets/img/destinations/mexico.png",
+    "altText": "마야 문명",
+    "title": "Cancun",
+    "country": "Mexico"
+  },
+  {
+    "imageSrc": "./assets/img/destinations/italy.png",
+    "altText": "콜로세움",
+    "title": "Rome",
+    "country": "Italy"
+  },
+  {
+    "imageSrc": "./assets/img/destinations/france.png",
+    "altText": "에펠탑",
+    "title": "Paris",
+    "country": "France"
+  }
+]

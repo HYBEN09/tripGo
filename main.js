@@ -1,7 +1,6 @@
 import {
   setupVideoControls,
   getNode,
-  destinations,
   startTyping,
 } from "./public/scripts/index.js";
 
@@ -48,19 +47,28 @@ function handleScroll() {
 
 window.addEventListener("scroll", handleScroll);
 
-destinations.forEach((destination) => {
-  const { imageSrc, altText, title, country } = destination;
+fetch("./public/scripts/data/destination.json")
+  .then((response) => response.json())
+  .then((data) => {
+    const destinations = data;
 
-  const colContent = `
-    <div class="col-content">
-      <img src="${imageSrc}" alt="${altText}" />
-      <h5>${title}</h5>
-      <p>${country}</p>
-    </div>
-  `;
+    destinations.forEach((destination) => {
+      const { imageSrc, altText, title, country } = destination;
 
-  destinationContent.insertAdjacentHTML("beforeend", colContent);
-});
+      const colContent = `
+        <div class="col-content">
+          <img src="${imageSrc}" alt="${altText}" />
+          <h5>${title}</h5>
+          <p>${country}</p>
+        </div>
+      `;
+
+      destinationContent.insertAdjacentHTML("beforeend", colContent);
+    });
+  })
+  .catch((error) => {
+    console.error("An error occurred while fetching the JSON data:", error);
+  });
 
 fetch("./public/scripts/data/packageItem.json")
   .then((response) => response.json())
