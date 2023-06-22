@@ -350,3 +350,81 @@ section {
 .newsletter form button:active {
   transform: scale(0.9);
 }
+
+/* Footer Section Start */
+#contact {
+  background: var(--primary-color);
+}
+
+.main {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer {
+  padding: 30px;
+}
+
+.list {
+  width: 25%;
+}
+
+.list h4 {
+  position: relative;
+  font-size: var(--text-lg);
+  color: var(--bg-color);
+  margin-bottom: 30px;
+}
+
+.list h4::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 70px;
+  left: 0;
+  bottom: -10px;
+  background: var(--bg-color);
+}
+
+.list ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.list ul li a {
+  color: var(--bg-color-opacity);
+  display: block;
+  transition: all 0.3s;
+}
+
+.list ul li a:hover {
+  color: var(--bg-color);
+  transform: translateX(14px);
+}
+
+.social a {
+  height: 40px;
+  width: 40px;
+  margin-right: 6px;
+  background: var(--bg-color);
+  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.list .social a:hover {
+  transform: scale(1.12);
+}
+
+.end-text {
+  padding-top: 90px;
+}
+
+.end-text p {
+  color: var(--bg-color);
+  font-size: var(--text-sm);
+  letter-spacing: 1px;
+}
