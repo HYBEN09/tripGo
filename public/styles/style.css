@@ -575,3 +575,70 @@ section {
     --text-xl: 1.5rem;
   }
 }
+
+/* swiper */
+.advertisement {
+  position: relative;
+}
+
+.swiper-slide {
+  width: 50%;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-pagination {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.swiper-button-prev::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--bg-color);
+  border-right: 2px solid var(--bg-color);
+  transform: rotate(225deg);
+}
+
+.swiper-button-next::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--bg-color);
+  border-right: 2px solid var(--bg-color);
+  transform: rotate(45deg);
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}

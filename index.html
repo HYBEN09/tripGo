@@ -13,7 +13,16 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./public/styles/style.css" />
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script src="main.js" type="module"></script>
   </head>
   <body>
@@ -56,6 +65,19 @@
       </div>
     </section>
     <!-- Home Section End -->
+
+    <!--Advertisement Section Start  -->
+    <section class="advertisement">
+      <div class="swiper-container">
+        <div class="swiper-wrapper"></div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </section>
+    <!--Advertisement Section End  -->
 
     <!-- Container Start -->
     <section id="service">
@@ -250,5 +272,29 @@
       </div>
     </footer>
     <!-- Footer Section End -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          autoplay: true,
+          loop: true,
+          keyboard: {
+            enabled: true,
+          },
+          speed: 2000,
+          grabCursor: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      });
+    </script>
   </body>
 </html>
