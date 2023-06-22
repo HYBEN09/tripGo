@@ -2,6 +2,7 @@
   "name": "travel",
   "private": true,
   "version": "0.0.0",
+  "description": "HTML,CSS,JavaScript 를 이용하여 반응형 여행 웹사이트 구현",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,5 +15,13 @@
   "dependencies": {
     "animejs": "3.2.1",
     "swiper": "9.4.1"
-  }
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "시맨틱 마크업",
+    "웹표준",
+    "함수형 프로그래밍"
+  ]
 }
