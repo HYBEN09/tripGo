@@ -132,6 +132,53 @@ section {
 .text h2 {
   font-size: var(--text-xl);
   line-height: 1.1;
+  height: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+.service-form {
+  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-form input[type="text"] {
+  padding: 1.2rem;
+  width: 80%;
+  font-size: var(--text-lg);
+  border: none;
+  border-radius: 24px;
+  box-shadow: 5px 10px 30px rgba(85, 85, 85, 0.2);
+}
+
+.service-form input[type="text"]::placeholder {
+  color: #858585;
+}
+
+.service-form input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #23a687;
+  box-shadow: 0 0 4px rgba(35, 57, 166, 0.3);
+}
+
+.search-button {
+  position: absolute;
+  right: 12%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.8rem 1.2rem;
+  background: var(--primary-color);
+  border: none;
+  color: var(--bg-color);
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .row-items {
@@ -188,6 +235,7 @@ section {
 .title h2 {
   font-size: var(--text-xl);
   line-height: 1.2;
+  font-weight: 600;
 }
 
 .package-content {
@@ -330,7 +378,7 @@ section {
 }
 
 .newsletter form input:focus {
-  border: 2px solid #0000ff;
+  border: 2px solid #23a687;
 }
 
 .newsletter form button {
@@ -452,7 +500,7 @@ section {
   }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 876px) {
   #menu-icon {
     display: block;
   }
