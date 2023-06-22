@@ -12,6 +12,7 @@
     "vite": "^4.3.9"
   },
   "dependencies": {
+    "animejs": "3.2.1",
     "swiper": "9.4.1"
   }
 }
