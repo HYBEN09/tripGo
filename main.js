@@ -1,7 +1,10 @@
 import {
-  setupVideoControls,
   getNode,
+  fetchData,
   startTyping,
+  renderDestination,
+  renderPackageItems,
+  setupVideoControls,
 } from "./public/scripts/index.js";
 
 const header = getNode("header");
@@ -10,7 +13,6 @@ const menuIcon = getNode("#menu-icon");
 const searchInput = getNode("#search-input");
 const navLinks = navbar.querySelectorAll("a");
 const searchButton = getNode(".search-button");
-const destinationContent = getNode(".destination-content");
 
 searchButton.addEventListener("click", function (e) {
   e.preventDefault();
@@ -40,59 +42,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // sticky header
-
 function handleScroll() {
   header.classList.toggle("sticky", window.scrollY > 0);
 }
 
 window.addEventListener("scroll", handleScroll);
 
-fetch("./public/scripts/data/destination.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const destinations = data;
+// dynamically Destination data
+fetchData("./public/scripts/data/destination.json").then((data) => {
+  renderDestination(data);
+});
 
-    destinations.forEach((destination) => {
-      const { imageSrc, altText, title, country } = destination;
-
-      const colContent = `
-        <div class="col-content">
-          <img src="${imageSrc}" alt="${altText}" />
-          <h5>${title}</h5>
-          <p>${country}</p>
-        </div>
-      `;
-
-      destinationContent.insertAdjacentHTML("beforeend", colContent);
-    });
-  })
-  .catch((error) => {
-    console.error("An error occurred while fetching the JSON data:", error);
-  });
-
-fetch("./public/scripts/data/packageItem.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const rowItemsHtml = data
-      .map(
-        (item) => `
-      <div class="container-box">
-        <div class="container-img">
-          <img src="${item.imgSrc}" alt="${item.altText}" />
-        </div>
-        <h4>${item.title}</h4>
-        <p>${item.description}</p>
-      </div>
-    `
-      )
-      .join("");
-
-    const rowItemsContainer = document.querySelector(".row-items");
-    rowItemsContainer.innerHTML = rowItemsHtml;
-  })
-  .catch((error) => {
-    console.error("An error occurred while fetching the JSON data:", error);
-  });
+// dynamically PackageItems data
+fetchData("./public/scripts/data/packageItem.json").then((data) => {
+  renderPackageItems(data);
+});
 
 // menu
 menuIcon.addEventListener("click", () => {
