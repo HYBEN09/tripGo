@@ -73,6 +73,7 @@ navLinks.forEach((link) => {
   });
 });
 
+// swiper
 const data = [
   {
     id: 1,

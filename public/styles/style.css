@@ -281,6 +281,8 @@ section {
 .stars i {
   color: var(--primary-color);
   font-size: 20px;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .location h4 {
