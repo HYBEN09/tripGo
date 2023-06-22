@@ -1,5 +1,3 @@
-const destinationContent = document.querySelector(".destination-content");
-
 export function fetchData(url) {
   return fetch(url)
     .then((response) => response.json())
@@ -8,20 +6,22 @@ export function fetchData(url) {
     });
 }
 
+const destinationContent = document.querySelector(".destination-content");
+
 export function renderDestination(destinations) {
-  destinations.forEach((destination) => {
+  const destinationHTML = destinations.map((destination) => {
     const { imageSrc, altText, title, country } = destination;
 
-    const colContent = `
+    return `
       <div class="col-content">
         <img src="${imageSrc}" alt="${altText}" />
         <h5>${title}</h5>
         <p>${country}</p>
       </div>
     `;
-
-    destinationContent.insertAdjacentHTML("beforeend", colContent);
   });
+
+  destinationContent.innerHTML = destinationHTML.join("");
 }
 
 export function renderPackageItems(data) {
