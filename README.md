@@ -18,3 +18,9 @@ https://tripgo.vercel.app/
 |                                          HTML                                           |                                                                              CSS                                                                              |                                                  JavaScript                                                  |
 | :-------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
 | <img src="https://www.w3.org/html/logo/img/mark-word-icon.png" width="50" height="50"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/800px-CSS3_logo_and_wordmark.svg.png" width="40" height="50"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="50" height="50" /> |
+
+## 주요 기능
+- 반응형으로 구현
+- 접근성을 위해 esc누르면 동영상이 멈추고 Enter키를 누르면 다시 재생되게 구현
+- 효과적인 애니메이션위해 anime 라이브러리 사용
+- 가독성과 재사용성을 위해 모듈분리 & 동적으로 구현
